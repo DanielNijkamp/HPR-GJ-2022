@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   jumpingPower: 16
-  jumpUpMultiplier: 1.2
+  jumpUpMultiplier: 0.8
   jumpDownMultiplier: 0.7
   rb: {fileID: 1684901440543699986}
   groundCheck: {fileID: 1684901439397664846}
