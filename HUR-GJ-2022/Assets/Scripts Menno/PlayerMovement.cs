@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
+    [SerializeField] private float jumpUpMultiplier = 1f;
+    [SerializeField] private float jumpDownMultiplier = 0.5f;
     private bool isFacingRight = true;
 
     [Header("Movement Parts")]
@@ -15,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    [SerializeField] private Animator _anim;
     void Start()
     {
         
@@ -25,26 +26,17 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (horizontal == 0)
-        {
-            _anim.CrossFade("Player_Idle", 0, 0);
-        }
-
-        if (horizontal < 0.1)
-        {
-            _anim.CrossFade("Player_Walk", 0, 0);
-        }
-
+       
             if (Input.GetButtonDown("Jump") && isGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            _anim.CrossFade("Player_JumpUp",0,0);
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower * jumpUpMultiplier);
+            
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-            _anim.CrossFade("Player_JumpDown", 0, 0);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpDownMultiplier);
+            
         }
 
         Flip();
