@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    private bool isCooldown = false;
     private Animator anim;
+    public ButtonType buttontype;
+    public float temp_cooldown;
+    public enum ButtonType
+    {
+        Normal,
+        Temporary,
+        Door
+    }
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -12,8 +21,36 @@ public class Button : MonoBehaviour
     }
     public void MoveCubes()
     {
+        
+        if (!isCooldown)
+        {
+            this.anim.Play("ButtonPress");
+            Blocks[] blocks = GameObject.FindObjectsOfType<Blocks>();
+            foreach (Blocks block in blocks)
+            {
+                block.MovePos();
+            }
+            StartCoroutine(Cooldown());
+        }
+        
+    }
+    public void TempMoveCubes()
+    {
+        if (!isCooldown)
+        {
+            StartCoroutine(TempMoveCR());
+        }
+    }
+    IEnumerator TempMoveCR()
+    {
         this.anim.Play("ButtonPress");
         Blocks[] blocks = GameObject.FindObjectsOfType<Blocks>();
+        foreach (Blocks block in blocks)
+        {
+            block.MovePos();
+        }
+        StartCoroutine(Cooldown());
+        yield return new WaitForSeconds(temp_cooldown);
         foreach (Blocks block in blocks)
         {
             block.MovePos();
@@ -23,7 +60,21 @@ public class Button : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            MoveCubes();
+            switch (buttontype)
+            {
+                case ButtonType.Normal:
+                    MoveCubes();
+                    break;
+                case ButtonType.Temporary:
+                    TempMoveCubes();
+                    break;
+            }
         }
+    }
+    IEnumerator Cooldown()
+    {
+        isCooldown = true;
+        yield return new WaitForSeconds(1.5f);
+        isCooldown = false;
     }
 }

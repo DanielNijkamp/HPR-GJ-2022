@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6061675090829655275}
   - component: {fileID: 6061675090829655273}
   - component: {fileID: 6061675090829655278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   FallingColor: {r: 0.01637277, g: 0, b: 0.41509432, a: 1}
   visual: {fileID: 6061675090945587828}
   isActivated: 0
-  Speed: 10
+  Speed: 15
   startValue: 0
   endValue: 5
 --- !u!61 &6061675090829655278
