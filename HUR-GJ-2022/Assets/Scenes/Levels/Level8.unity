@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 1354338343627034251, guid: 3374dd9d23449b5479ca3b50cf441d7a, type: 3}
+      propertyPath: iLevelToLoad
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3374dd9d23449b5479ca3b50cf441d7a, type: 3}
 --- !u!1001 &1331429806

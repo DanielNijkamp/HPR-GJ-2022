@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684901439397664845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.73, z: 0}
+  m_LocalPosition: {x: 0, y: -2.559, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1684901440543699985}
@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 1684901440543699990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.26, y: -5.77, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 1684901439397664846}
   m_Father: {fileID: 0}
@@ -154,12 +154,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 9.472515
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 985f84845df3ad149bb6d02137b36325, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
@@ -176,10 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3af97f504ed16439faa246d22e91d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  jumpingPower: 16
+  speed: 10
+  jumpingPower: 14
   jumpUpMultiplier: 0.8
-  jumpDownMultiplier: 0.7
+  jumpDownMultiplier: 0.4
   rb: {fileID: 1684901440543699986}
   groundCheck: {fileID: 1684901439397664846}
   groundLayer:

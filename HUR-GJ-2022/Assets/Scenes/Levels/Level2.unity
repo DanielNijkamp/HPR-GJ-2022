@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1354338343627034251, guid: 3374dd9d23449b5479ca3b50cf441d7a, type: 3}
       propertyPath: iLevelToLoad
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1354338343627034251, guid: 3374dd9d23449b5479ca3b50cf441d7a, type: 3}
       propertyPath: sLevelToLoad
