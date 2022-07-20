@@ -8,6 +8,10 @@ public class Button : MonoBehaviour
     private Animator anim;
     public ButtonType buttontype;
     public float temp_cooldown;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSButton;
+
     public enum ButtonType
     {
         Normal,
@@ -24,6 +28,7 @@ public class Button : MonoBehaviour
         
         if (!isCooldown)
         {
+            
             this.anim.Play("ButtonPress");
             Blocks[] blocks = GameObject.FindObjectsOfType<Blocks>();
             foreach (Blocks block in blocks)
@@ -60,6 +65,7 @@ public class Button : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioSButton.Play();
             switch (buttontype)
             {
                 case ButtonType.Normal:

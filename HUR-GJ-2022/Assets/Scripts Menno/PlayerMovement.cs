@@ -12,11 +12,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpDownMultiplier = 0.5f;
     private bool isFacingRight = true;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+
     [Header("Movement Parts")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+
+    
     void Start()
     {
         
@@ -28,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower * jumpUpMultiplier);
-
+            audioSource.Play();
         }
 
         Flip();

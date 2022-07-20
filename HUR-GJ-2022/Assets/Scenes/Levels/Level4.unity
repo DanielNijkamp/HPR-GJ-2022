@@ -5289,10 +5289,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TempButton
       objectReference: {fileID: 0}
-    - target: {fileID: 6303321479618720491, guid: 23dd10d9e0ea37141b39b3b5273aacc1, type: 3}
-      propertyPath: temp_cooldown
-      value: 18
-      objectReference: {fileID: 0}
     - target: {fileID: 6303321479618720495, guid: 23dd10d9e0ea37141b39b3b5273aacc1, type: 3}
       propertyPath: m_RootOrder
       value: 1
