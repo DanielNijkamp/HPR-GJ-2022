@@ -25,27 +25,29 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-       
-            if (Input.GetButtonDown("Jump") && isGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower * jumpUpMultiplier);
-            
-        }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpDownMultiplier);
-            
-        }
+        
 
         Flip();
     }
     private void FixedUpdate()
     {
+        horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Jump") && isGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower * jumpUpMultiplier);
+
+        }
+
+        //feature
+        //if (Input.GetButtonUp("Jump") && rb.velocity.y > 0)
+        //{
+          //  rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpDownMultiplier);
+
+        //}
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
-
+    
     private bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);

@@ -6960,7 +6960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1354338343627034251, guid: 3374dd9d23449b5479ca3b50cf441d7a, type: 3}
       propertyPath: iLevelToLoad
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1354338343627034251, guid: 3374dd9d23449b5479ca3b50cf441d7a, type: 3}
       propertyPath: sLevelToLoad
@@ -11367,22 +11367,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1684901440543699984, guid: edd1a1814690b9b4ca1aefc278513b81, type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684901440543699984, guid: edd1a1814690b9b4ca1aefc278513b81, type: 3}
-      propertyPath: jumpingPower
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684901440543699984, guid: edd1a1814690b9b4ca1aefc278513b81, type: 3}
-      propertyPath: jumpUpMultiplier
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684901440543699984, guid: edd1a1814690b9b4ca1aefc278513b81, type: 3}
-      propertyPath: jumpDownMultiplier
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 1684901440543699985, guid: edd1a1814690b9b4ca1aefc278513b81, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -11393,7 +11377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1684901440543699985, guid: edd1a1814690b9b4ca1aefc278513b81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.952
+      value: 20.7
       objectReference: {fileID: 0}
     - target: {fileID: 1684901440543699985, guid: edd1a1814690b9b4ca1aefc278513b81, type: 3}
       propertyPath: m_LocalPosition.z
