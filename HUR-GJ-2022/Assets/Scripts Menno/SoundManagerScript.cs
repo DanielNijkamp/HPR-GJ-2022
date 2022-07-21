@@ -6,7 +6,8 @@ public class SoundManagerScript : MonoBehaviour
 {
     
     private static SoundManagerScript SoundManager;
-    [SerializeField] public AudioSource Deathsound;
+    public AudioClip[] SFX;
+    [SerializeField] public AudioSource source;
 
     private void Awake()
     {
@@ -23,9 +24,22 @@ public class SoundManagerScript : MonoBehaviour
 
     public void DeathSound()
     {
-        Deathsound.Play();
+        source.clip = SFX[0];
+        source.Play();
         
     }
-    
+    public void MouseOverButton()
+    {
+        source.clip = SFX[1];
+        source.Play();
+
+    }
+    public void ButtonPressed()
+    {
+        source.clip = SFX[2];
+        source.Play();
+
+    }
+
 }
 
