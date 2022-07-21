@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-
+    
     private static SoundManagerScript SoundManager;
+    [SerializeField] public AudioSource Deathsound;
 
     private void Awake()
     {
@@ -20,5 +21,11 @@ public class SoundManagerScript : MonoBehaviour
         }
     }
 
+    public void DeathSound()
+    {
+        Deathsound.Play();
+        
+    }
+    
 }
 
